@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Creative Board</title>
+</head>
+<body>
+    <h1>Welcome to the Creative Board!</h1>
+
+    <form method="post">
+        <input type="text" name="name" placeholder="Your Name" required><br><br>
+        <textarea name="note" placeholder="Your Idea..." required></textarea><br><br>
+        <button type="submit">Submit</button>
+    </form>
+
+    <h2>Ideas:</h2>
+    <ul>
+        {% for note in notes %}
+            <li><strong>{{ note.name }}:</strong> {{ note.note }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
+
+
